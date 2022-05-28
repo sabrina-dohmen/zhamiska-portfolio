@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="contacto.css">
+    <script type="text/javascript" src="contacto.js"> </script>
+</head>
+
+<body style="background: linear-gradient(to bottom, rgb(235, 232, 231) );">
+    <div style="padding: 60px 120px 120px;">
+        <div style="margin-bottom: 30px">
+            <h2 style="font-family: 'Cardo', serif; color: rgb(82, 82, 82);"> Contacto </h2>
+            <p style="height: 1px; width: 100%; background-color: rgba(131, 131, 131, 0.671);"></p>
+        </div>
+
+        <div>
+            <form action="" id="formulario">
+                <label style="font-family: 'Cardo', serif; font-style: italic;">
+                    <samp style="font-family: 'Cardo', serif;"> Tu nombre </samp>
+                    <input class="form-input" type="text" name="fnombre" id="fnombre" placeholder="..."
+                        style="margin-bottom: 10px;">
+
+                    <samp style="font-family: 'Cardo', serif;"> Tu email </samp>
+                    <input class="form-input" type="text" name="femail" id="femail" placeholder="..."
+                        style="margin-bottom: 10px;">
+
+                    <samp style="font-family: 'Cardo', serif;"> Asunto </samp>
+                    <input class="form-input" type="text" name="fasunto" id="fasunto" placeholder="..."
+                        style="margin-bottom: 10px;">
+
+                    <samp style="font-family: 'Cardo', serif;"> Mensaje </samp>
+                    <textarea class="form-input" name="fmensaje" id="fmensaje" rows="4" cols="50" placeholder="..."
+                        style="margin-bottom: 10px;"></textarea>
+                </label>
+                <div class="bonton-choise">
+                    <li class="boton-enviar" onclick="cleanForm()"> Enviar </li>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

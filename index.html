@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhamiska</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="index.css">
+
+    <style type="text/css">
+        #paginainicio {
+            display: block;
+            animation: fadeIn;
+            animation-duration: 1s;
+        }
+
+        #paginaportfolio {
+            display: none;
+            animation: fadeIn;
+            animation-duration: 1s;
+        }
+
+        #aboutpage {
+            display: none;
+            animation: fadeIn;
+            animation-duration: 1s;
+        }
+
+        #paginacontacto {
+            display: none;
+            animation: fadeIn;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+
+<body class="grid-container">
+
+    <!-- sidebar section -->
+    <aside class="sidebar">
+        <nav class="navbar">
+            <div class="contenedor-importante">
+                <img class="avatar" src="img/avatar.jpg" alt="Avatar" onclick="navegacion(0)">
+                <br>
+                <h2 style="color: #525252; margin-bottom: 20px;"> ZHAMISKA </h2>
+
+                <div class="botones-work">
+                    <ul style="padding-left: 30px; padding-right: 30px">
+                        <li onclick="navegacion(1)" class="infobuttons">Portfolio</li>
+                        <li onclick="navegacion(2)" class="infobuttons">Acerca de mi</li>
+                        <li onclick="navegacion(3)" style="margin-bottom: 30px;" class="infobuttons">Contacto</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </aside>
+
+    <!-- main section -->
+    <article class="main">
+        <iframe id="paginainicio" src="home.html" class="frame-container" style="position:relative;"></iframe>
+        <iframe id="paginaportfolio" class="frame-container" src="./portfolio.html"></iframe>
+        <iframe id="aboutpage" src="about.html" class="frame-container"></iframe>
+        <iframe id="paginacontacto" src="contacto.html" class="frame-container"></iframe>
+    </article>
+
+    <script type="text/javascript">
+        function navegacion(number) {
+            switch (number) {
+                case 0: console.log('Home');
+                    document.getElementById('paginainicio').style.display = 'block';
+                    document.getElementById('paginaportfolio').style.display = 'none';
+                    document.getElementById('aboutpage').style.display = 'none';
+                    document.getElementById('paginacontacto').style.display = 'none';
+                    location.reload(); 
+                    break;
+                case 1: console.log('Portfolio');
+                    document.getElementById('paginainicio').style.display = 'none';
+                    document.getElementById('paginaportfolio').style.display = 'block';
+                    document.getElementById('aboutpage').style.display = 'none';
+                    document.getElementById('paginacontacto').style.display = 'none';
+                    break;
+                case 2: console.log('About');
+                    document.getElementById('paginainicio').style.display = 'none';
+                    document.getElementById('paginaportfolio').style.display = 'none';
+                    document.getElementById('aboutpage').style.display = 'block';
+                    document.getElementById('paginacontacto').style.display = 'none';
+                    break;
+                case 3: console.log('Contacto');
+                    document.getElementById('paginainicio').style.display = 'none';
+                    document.getElementById('paginaportfolio').style.display = 'none';
+                    document.getElementById('aboutpage').style.display = 'none';
+                    document.getElementById('paginacontacto').style.display = 'block';
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

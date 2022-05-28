@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 33.3%;
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.column img {
+  /* margin-top: 8px; */
+  vertical-align: middle;
+  width: 100%;
+
+  box-shadow: 0 2px 3px 0 rgba(0, 0.5, 0, 0.5), 0 2px 2px 0 rgba(0, 0, 5.5, 0.1);
+}
+
+/* .column img:hover {
+
+  cursor: pointer;
+  animation-duration: 4s;
+  opacity: 0.8;
+      color: #fff;
+} */
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* --------------------- */
+    /* Image zoom on hover + Overlay colour */
+    .imagenormal {
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      margin-bottom: 8px;
+  }
+
+  .imagezoom {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all .5s;
+  
+  }
+
+  a {
+      font-family: 'Cardo', serif;
+      display: none;
+      color: #ffffff;
+      text-align: center;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      cursor: pointer;
+  }
+
+  .imagenormal:hover .imagezoom,
+  .imagenormal:focus .imagezoom {
+      transform: scale(1.2);
+  }
+
+  .imagenormal:hover .imagezoom:before,
+  .imagenormal:focus .imagezoom:before {
+      display: block;
+  }
+
+  .imagenormal:hover a,
+  .imagenormal:focus a {
+      display: block;
+  }
+
+  .imagezoom:before {
+      content: "";
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(98, 119, 141, 0.7);
+  
+  }
